@@ -77,7 +77,8 @@ a {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin-top: 0;
   line-height: 1.2;
   color: var(--text);
@@ -98,13 +99,18 @@ h3 {
   margin-bottom: 0.6rem;
 }
 
+h4 {
+  font-size: 1rem;
+}
+
 .hero-text,
 .section-heading p,
 .series-header p,
 .doc-description,
 .architecture-card p,
 .excluded-note,
-.site-footer p {
+.site-footer p,
+.pathway-note p {
   color: var(--muted);
 }
 
@@ -143,7 +149,8 @@ section {
 }
 
 .architecture-card,
-.doc-card {
+.doc-card,
+.pathway-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -217,6 +224,109 @@ section {
   border-radius: 8px;
 }
 
+.pathways-section {
+  padding: 3rem 0;
+}
+
+.role-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.role-tab {
+  appearance: none;
+  border: 1px solid var(--accent);
+  background: #fffdf8;
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 0.8rem 1.15rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.role-tab:hover,
+.role-tab:focus {
+  background: #f5ecd4;
+  outline: none;
+}
+
+.role-tab.is-active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.role-panels {
+  display: block;
+}
+
+.role-panel {
+  display: none;
+}
+
+.role-panel.is-visible {
+  display: block;
+}
+
+.pathway-label {
+  margin: 0 0 0.6rem;
+  color: var(--accent);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pathway-card h3 {
+  margin-bottom: 1rem;
+}
+
+.pathway-phase + .pathway-phase {
+  margin-top: 1.1rem;
+}
+
+.pathway-phase h4 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.pathway-phase ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.pathway-phase li {
+  margin-bottom: 0.45rem;
+  color: var(--muted);
+}
+
+.pathway-phase a {
+  text-decoration: none;
+  color: var(--accent-dark);
+}
+
+.pathway-phase a:hover,
+.pathway-phase a:focus {
+  text-decoration: underline;
+}
+
+.pathway-note {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.doc-card {
+  scroll-margin-top: 100px;
+}
+
 .site-footer {
   padding: 1.5rem 0 2.5rem;
 }
@@ -267,5 +377,14 @@ section {
 
   .brand-logo {
     width: 82px;
+  }
+
+  .role-switcher {
+    flex-direction: column;
+  }
+
+  .role-tab {
+    width: 100%;
+    text-align: left;
   }
 }
