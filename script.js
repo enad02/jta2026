@@ -1,10 +1,10 @@
 const LINKS = {
   tutorHandbook: 'pdfs/Tutor_Handbook.pdf',
   mentorHandbook: 'pdfs/Mentor_Handbook.pdf',
-  skool: 'https://YOUR-SKOOL-URL',
-  notebooklm: 'https://YOUR-NOTEBOOKLM-URL',
-  support: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Support',
-  escalation: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Escalation',
+  skool: 'https://www.skool.com/full-ride-academy-6158/classroom',
+  notebooklm: 'https://notebooklm.google.com/notebook/8c8f03b2-3019-46bd-a088-32e549f31f23?authuser=3',
+  support: 'mailto:prakash@jothi.uk?subject=JTA%20Support',
+  escalation: 'mailto:prakash@jothi.uk?subject=JTA%20Escalation',
 };
 
 const HANDBOOK_DOCS = [
