@@ -3,645 +3,211 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jothi Tutor Academy | Documentation Framework</title>
-  <meta
-    name="description"
-    content="Jothi Tutor Academy documentation framework for tutors and mentors."
-  />
+  <title>Jothi Tutor Academy | Tutor and Mentor Hub</title>
+  <meta name="description" content="Jothi Tutor Academy hub for tutors and mentors. Start in the right place, follow the right route, and access the official documents when needed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <div class="brand-lockup">
-        <img src="logo.svg" alt="Jothi Learning logo" class="brand-logo" />
-        <div class="brand-copy">
-          <p class="eyebrow">Jothi Tutor Academy</p>
-          <h1>Documentation Framework</h1>
-        </div>
+    <div class="container header-inner">
+      <div class="brand-block">
+        <p class="eyebrow">Jothi Tutor Academy</p>
+        <h1>Tutor and Mentor Hub</h1>
+        <p class="intro">
+          Start in the right place, follow the right route, and open the official source only when you need the exact standard.
+        </p>
       </div>
-
-      <p class="hero-text">
-        A structured documentation system for tutors and mentors. Use the guided
-        pathway below to start with the right documents for your role, then use
-        the reference library for lookup and review.
-      </p>
+      <div class="header-actions">
+        <a class="btn btn-primary" id="headerTutorBtn" href="#tutor-route">Tutor Route</a>
+        <a class="btn btn-secondary" id="headerMentorBtn" href="#mentor-route">Mentor Route</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="pathways-section">
+    <section class="section">
       <div class="container">
-        <div class="section-heading narrow">
-          <h2>Start Here</h2>
+        <div class="card">
+          <h2>Welcome</h2>
           <p>
-            Tutors and mentors do not need the same route through the academy.
-            Choose your role to see the recommended reading order with direct links.
+            This hub is the front door to the JTA system. It is designed to reduce confusion, not add another layer.
+            Use it to choose the right route, open the right resource, and move forward without guesswork.
+          </p>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Channel</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Formal documents</td>
+                  <td>Source of truth</td>
+                </tr>
+                <tr>
+                  <td>Handbook</td>
+                  <td>Practical guide</td>
+                </tr>
+                <tr>
+                  <td>SKOOL</td>
+                  <td>Paced pathway</td>
+                </tr>
+                <tr>
+                  <td>NotebookLM</td>
+                  <td>Clarification and recap</td>
+                </tr>
+                <tr>
+                  <td>PDF library</td>
+                  <td>Official reference access</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="quiet-line">All routes lead to the same standard. Use the route that helps you act clearly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <h2>Choose Your Route</h2>
+        <div class="route-grid">
+          <article class="route-card" id="tutor-route">
+            <span class="route-tag">Tutor</span>
+            <h3>I am a Tutor</h3>
+            <p>
+              Start with the Tutor Handbook. Then follow SKOOL in sequence. Use NotebookLM for quick clarification.
+              Open the formal documents when you need the exact standard.
+            </p>
+            <ol>
+              <li>Read the Tutor Handbook first</li>
+              <li>Then work through SKOOL in order</li>
+              <li>Use NotebookLM when you need clarification or recap</li>
+              <li>Use the formal documents when you need the exact standard</li>
+            </ol>
+            <div class="button-stack" id="tutorButtons"></div>
+          </article>
+
+          <article class="route-card" id="mentor-route">
+            <span class="route-tag">Mentor</span>
+            <h3>I am a Mentor</h3>
+            <p>
+              Start with the Mentor Handbook. Then use the formal documents when observing, judging evidence,
+              or making progression and certification decisions.
+            </p>
+            <ol>
+              <li>Read the Mentor Handbook first</li>
+              <li>Use the formal documents when judging standards</li>
+              <li>Use SKOOL where mentor-linked stage pages matter</li>
+              <li>Use NotebookLM when you need quick clarification</li>
+            </ol>
+            <div class="button-stack" id="mentorButtons"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2>Quick Access</h2>
+        <p class="section-copy">Use these links when you already know where you need to go.</p>
+        <div class="quick-grid" id="quickAccess"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col-layout">
+        <div class="card">
+          <h2>When to Use What</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>If you need...</th>
+                  <th>Go to...</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>The practical guide</td>
+                  <td>Handbook</td>
+                </tr>
+                <tr>
+                  <td>The next page, task, or training step</td>
+                  <td>SKOOL</td>
+                </tr>
+                <tr>
+                  <td>A quick explanation or recap</td>
+                  <td>NotebookLM</td>
+                </tr>
+                <tr>
+                  <td>The exact official standard</td>
+                  <td>Source Documents</td>
+                </tr>
+                <tr>
+                  <td>Help choosing the right route</td>
+                  <td>This Hub</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="quiet-line">
+            Start with the handbook. Use SKOOL for sequence. Use NotebookLM for clarification. Use the source documents for exact standards.
           </p>
         </div>
 
-        <div class="role-switcher" role="tablist" aria-label="Choose your role">
-          <button
-            class="role-tab is-active"
-            type="button"
-            data-role="tutor"
-            aria-selected="true"
-            aria-controls="panel-tutor"
-            id="tab-tutor"
-          >
-            I am a Tutor
+        <div class="card">
+          <h2>Need Help?</h2>
+          <p>
+            Do not struggle in silence. For normal teaching, stage, or mentoring questions, start with your usual mentor
+            or academy route.
+          </p>
+          <p>
+            If the issue involves fairness, safeguarding, welfare, serious professional concern, or something that should not wait,
+            use the approved Jothi escalation route immediately.
+          </p>
+          <div class="button-stack" id="supportButtons"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <h2>Source Documents</h2>
+            <p class="section-copy">Official PDFs. Keep the filenames unchanged in the <code>/pdfs</code> folder and just replace the file contents when you update versions.</p>
+          </div>
+          <button class="btn btn-secondary" id="toggleDocsBtn" type="button" aria-expanded="false" aria-controls="documentsPanel">
+            Show Documents
           </button>
-
-          <button
-            class="role-tab"
-            type="button"
-            data-role="mentor"
-            aria-selected="false"
-            aria-controls="panel-mentor"
-            id="tab-mentor"
-          >
-            I am a Mentor
-          </button>
         </div>
 
-        <div class="role-panels">
-          <section
-            class="role-panel is-visible"
-            id="panel-tutor"
-            role="tabpanel"
-            aria-labelledby="tab-tutor"
-          >
-            <div class="phase-grid">
-              <article class="phase-card">
-                <p class="phase-label">Phase 1</p>
-                <h3>Understand the academy model</h3>
-                <p class="phase-description">
-                  Start with the conceptual foundation of the academy. These documents explain what JTA is,
-                  how Jothi thinks about learning, and how the teaching system is structured.
-                </p>
-
-                <div class="resource-list">
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JF01</p>
-                      <p class="resource-title">Jothi Tutor Academy Executive Foundation</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JF01.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JF02</p>
-                      <p class="resource-title">Jothi Trifecta Philosophy</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JF02.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JF03</p>
-                      <p class="resource-title">Jothi 4T Teaching Engine</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JF03.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="phase-card">
-                <p class="phase-label">Phase 2</p>
-                <h3>Learn what good teaching looks like</h3>
-                <p class="phase-description">
-                  These standards define what strong teaching looks like in practice. Read these before
-                  delivering lessons so expectations are clear from the start.
-                </p>
-
-                <div class="resource-list">
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS01</p>
-                      <p class="resource-title">Lesson Delivery Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS01.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS02</p>
-                      <p class="resource-title">Digital Board Teaching Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS02.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS03</p>
-                      <p class="resource-title">Assessment and Progress Monitoring Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS03.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS05</p>
-                      <p class="resource-title">Teaching Environment and Technology Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS05.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS04</p>
-                      <p class="resource-title">Parent Communication Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS04.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="phase-card">
-                <p class="phase-label">Phase 3</p>
-                <h3>Understand development and progression</h3>
-                <p class="phase-description">
-                  This phase explains how your development is monitored, how reflection works, how mentors observe,
-                  and what certification and sign-off look like.
-                </p>
-
-                <div class="resource-list">
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD03</p>
-                      <p class="resource-title">Tutor Residency Progress Framework</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD03.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD02</p>
-                      <p class="resource-title">Tutor Lesson Reflection Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD02.pdf" target="_blank" rel="noopener">Read Standard</a>
-                      <a href="https://forms.gle/5dKQGjmGvxsYjr716" target="_blank" rel="noopener">Open Form</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD01</p>
-                      <p class="resource-title">Tutor Competency Framework</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD01.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD04</p>
-                      <p class="resource-title">Mentor Observation Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD04.pdf" target="_blank" rel="noopener">Read Standard</a>
-                      <a href="https://forms.gle/RL7p22ZAXGJurE2L6" target="_blank" rel="noopener">Open Form</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD06</p>
-                      <p class="resource-title">Tutor Certification and Sign-Off Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD06.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="priority-note">
-                  <strong>First priority reading:</strong> JF01, JF02, JF03, JTS01
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section
-            class="role-panel"
-            id="panel-mentor"
-            role="tabpanel"
-            aria-labelledby="tab-mentor"
-            hidden
-          >
-            <div class="phase-grid">
-              <article class="phase-card">
-                <p class="phase-label">Phase 1</p>
-                <h3>Understand the academy model</h3>
-                <p class="phase-description">
-                  Start with the academy foundation, the Trifecta philosophy, and the 4T teaching model.
-                  This gives the conceptual frame for all mentoring decisions.
-                </p>
-
-                <div class="resource-list">
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JF01</p>
-                      <p class="resource-title">Jothi Tutor Academy Executive Foundation</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JF01.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JF02</p>
-                      <p class="resource-title">Jothi Trifecta Philosophy</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JF02.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JF03</p>
-                      <p class="resource-title">Jothi 4T Teaching Engine</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JF03.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="phase-card">
-                <p class="phase-label">Phase 2</p>
-                <h3>Understand mentor-facing development logic</h3>
-                <p class="phase-description">
-                  This phase explains the tutor development pathway, competency model, reflection process,
-                  mentor observation, and final certification logic.
-                </p>
-
-                <div class="resource-list">
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD03</p>
-                      <p class="resource-title">Tutor Residency Progress Framework</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD03.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD01</p>
-                      <p class="resource-title">Tutor Competency Framework</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD01.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD02</p>
-                      <p class="resource-title">Tutor Lesson Reflection Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD02.pdf" target="_blank" rel="noopener">Read Standard</a>
-                      <a href="PASTE-YOUR-JTD02-GOOGLE-FORM-URL-HERE" target="_blank" rel="noopener">Open Form</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD04</p>
-                      <p class="resource-title">Mentor Observation Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD04.pdf" target="_blank" rel="noopener">Read Standard</a>
-                      <a href="PASTE-YOUR-JTD04-GOOGLE-FORM-URL-HERE" target="_blank" rel="noopener">Open Form</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTD06</p>
-                      <p class="resource-title">Tutor Certification and Sign-Off Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTD06.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="phase-card">
-                <p class="phase-label">Phase 3</p>
-                <h3>Calibrate against teaching standards</h3>
-                <p class="phase-description">
-                  Read these standards after the development logic so your lesson observations, feedback,
-                  and coaching are grounded in the academy’s operational teaching expectations.
-                </p>
-
-                <div class="resource-list">
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS01</p>
-                      <p class="resource-title">Lesson Delivery Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS01.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS02</p>
-                      <p class="resource-title">Digital Board Teaching Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS02.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS03</p>
-                      <p class="resource-title">Assessment and Progress Monitoring Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS03.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS05</p>
-                      <p class="resource-title">Teaching Environment and Technology Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS05.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-
-                  <div class="resource-row">
-                    <div class="resource-meta">
-                      <p class="resource-code">JTS04</p>
-                      <p class="resource-title">Parent Communication Standard</p>
-                    </div>
-                    <div class="resource-actions">
-                      <a href="pdfs/JTS04.pdf" target="_blank" rel="noopener">Read PDF</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="priority-note">
-                  <strong>First priority reading:</strong> JF03, JTD04, JTD01, JTS01
-                </div>
-              </article>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-    <section class="overview alt-section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Framework Architecture</h2>
-          <p>
-            The framework is organised into three document series. Foundations define the academy model.
-            Teaching Standards define delivery expectations. Tutor Development defines progression,
-            reflection, mentoring, and certification.
-          </p>
-        </div>
-
-        <div class="architecture-grid">
-          <div class="architecture-card">
-            <h3>JF</h3>
-            <p class="architecture-title">Foundations</p>
-            <p>Core philosophy and instructional model.</p>
+        <div id="documentsPanel" class="docs-panel hidden">
+          <div class="docs-group">
+            <h3>Handbooks</h3>
+            <div class="docs-grid" id="handbookDocs"></div>
           </div>
 
-          <div class="architecture-card">
-            <h3>JTS</h3>
-            <p class="architecture-title">Teaching Standards</p>
-            <p>Operational teaching and communication standards.</p>
+          <div class="docs-group">
+            <h3>Formal JTA Documents</h3>
+            <div class="docs-grid" id="formalDocs"></div>
           </div>
-
-          <div class="architecture-card">
-            <h3>JTD</h3>
-            <p class="architecture-title">Tutor Development</p>
-            <p>Reflection, residency, mentoring, and sign-off standards.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="library-section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Reference Library</h2>
-          <p>
-            Use this section for direct lookup. The full document architecture is grouped by series.
-          </p>
-        </div>
-
-        <div class="library-group">
-          <div class="library-header">
-            <h3>JF — Foundations</h3>
-            <p>Core academy philosophy and teaching model.</p>
-          </div>
-
-          <div class="library-table">
-            <div class="library-row library-row-head">
-              <div>Code</div>
-              <div>Document</div>
-              <div>Actions</div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JF01</div>
-              <div class="library-title">Jothi Tutor Academy Executive Foundation</div>
-              <div class="library-actions">
-                <a href="pdfs/JF01.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JF02</div>
-              <div class="library-title">Jothi Trifecta Philosophy</div>
-              <div class="library-actions">
-                <a href="pdfs/JF02.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JF03</div>
-              <div class="library-title">Jothi 4T Teaching Engine</div>
-              <div class="library-actions">
-                <a href="pdfs/JF03.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="library-group">
-          <div class="library-header">
-            <h3>JTS — Teaching Standards</h3>
-            <p>Operational standards for lesson delivery, assessment, communication, and setup.</p>
-          </div>
-
-          <div class="library-table">
-            <div class="library-row library-row-head">
-              <div>Code</div>
-              <div>Document</div>
-              <div>Actions</div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTS01</div>
-              <div class="library-title">Lesson Delivery Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTS01.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTS02</div>
-              <div class="library-title">Digital Board Teaching Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTS02.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTS03</div>
-              <div class="library-title">Assessment and Progress Monitoring Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTS03.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTS04</div>
-              <div class="library-title">Parent Communication Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTS04.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTS05</div>
-              <div class="library-title">Teaching Environment and Technology Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTS05.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="library-group">
-          <div class="library-header">
-            <h3>JTD — Tutor Development</h3>
-            <p>Documents supporting reflection, residency, observation, and certification.</p>
-          </div>
-
-          <div class="library-table">
-            <div class="library-row library-row-head">
-              <div>Code</div>
-              <div>Document</div>
-              <div>Actions</div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTD01</div>
-              <div class="library-title">Tutor Competency Framework</div>
-              <div class="library-actions">
-                <a href="pdfs/JTD01.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTD02</div>
-              <div class="library-title">Tutor Lesson Reflection Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTD02.pdf" target="_blank" rel="noopener">Read Standard</a>
-                <a href="PASTE-YOUR-JTD02-GOOGLE-FORM-URL-HERE" target="_blank" rel="noopener">Open Form</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTD03</div>
-              <div class="library-title">Tutor Residency Progress Framework</div>
-              <div class="library-actions">
-                <a href="pdfs/JTD03.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTD04</div>
-              <div class="library-title">Mentor Observation Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTD04.pdf" target="_blank" rel="noopener">Read Standard</a>
-                <a href="PASTE-YOUR-JTD04-GOOGLE-FORM-URL-HERE" target="_blank" rel="noopener">Open Form</a>
-              </div>
-            </div>
-
-            <div class="library-row">
-              <div class="library-code">JTD06</div>
-              <div class="library-title">Tutor Certification and Sign-Off Standard</div>
-              <div class="library-actions">
-                <a href="pdfs/JTD06.pdf" target="_blank" rel="noopener">Open PDF</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="excluded-note" role="note" aria-label="Excluded document note">
-            <strong>Excluded from Version 2.1:</strong>
-            JTD05 — Tutor Skill Sign-Off Logbook is not included on this page at present.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="usage-section alt-section">
-      <div class="container narrow">
-        <div class="section-heading">
-          <h2>How the framework is used</h2>
-          <p>
-            Tutors use this framework to understand teaching expectations, lesson standards,
-            reflection processes, and certification requirements. Mentors use it for observation,
-            calibration, coaching, and consistency across the academy.
-          </p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Jothi Tutor Academy Documentation Framework</p>
+    <div class="container footer-inner">
+      <p>Jothi Tutor Academy — one system, multiple routes, one standard.</p>
     </div>
   </footer>
 
