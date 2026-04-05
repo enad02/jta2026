@@ -3,26 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jothi Tutor Academy | Tutor and Mentor Hub</title>
-  <meta name="description" content="Jothi Tutor Academy hub for tutors and mentors. Start in the right place, follow the right route, and access the official documents when needed." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Jothi Tutor Academy — Tutor and Mentor Hub</title>
+  <meta
+    name="description"
+    content="Jothi Tutor Academy hub for tutors and mentors. Start in the right place, follow the right route, and use the official source when you need the exact standard."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand-block">
-        <p class="eyebrow">Jothi Tutor Academy</p>
-        <h1>Tutor and Mentor Hub</h1>
-        <p class="intro">
-          Start in the right place, follow the right route, and open the official source only when you need the exact standard.
-        </p>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-brand">
+        <img src="logo.svg" alt="Jothi Tutor Academy logo" class="hero-logo" />
+        <div class="hero-copy">
+          <p class="eyebrow">JOTHI TUTOR ACADEMY</p>
+          <h1>Tutor and Mentor Hub</h1>
+          <p class="hero-text">
+            Start in the right place, follow the right route, and use the official source when you need the exact standard.
+          </p>
+        </div>
       </div>
-      <div class="header-actions">
-        <a class="btn btn-primary" id="headerTutorBtn" href="#tutor-route">Tutor Route</a>
-        <a class="btn btn-secondary" id="headerMentorBtn" href="#mentor-route">Mentor Route</a>
+
+      <div class="channel-card">
+        <h2 class="section-title small">How this system works</h2>
+        <div class="table-wrap compact">
+          <table>
+            <thead>
+              <tr>
+                <th>Channel</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Formal documents</td>
+                <td>Source of truth</td>
+              </tr>
+              <tr>
+                <td>Handbook</td>
+                <td>Practical guide</td>
+              </tr>
+              <tr>
+                <td>SKOOL</td>
+                <td>Paced pathway</td>
+              </tr>
+              <tr>
+                <td>NotebookLM</td>
+                <td>Clarification and recap</td>
+              </tr>
+              <tr>
+                <td>Portal documents</td>
+                <td>Official reference library</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="hero-note">
+          All routes lead to the same standard. Use the route that helps you act clearly.
+        </p>
       </div>
     </div>
   </header>
@@ -30,184 +68,160 @@
   <main>
     <section class="section">
       <div class="container">
-        <div class="card">
-          <h2>Welcome</h2>
-          <p>
-            This hub is the front door to the JTA system. It is designed to reduce confusion, not add another layer.
-            Use it to choose the right route, open the right resource, and move forward without guesswork.
+        <div class="section-intro">
+          <h2 class="section-title">Choose Your Route</h2>
+          <p class="section-text">
+            Tutors and mentors do not need the same starting point. Use the route that matches your role.
           </p>
-
-          <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>Channel</th>
-                  <th>Role</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Formal documents</td>
-                  <td>Source of truth</td>
-                </tr>
-                <tr>
-                  <td>Handbook</td>
-                  <td>Practical guide</td>
-                </tr>
-                <tr>
-                  <td>SKOOL</td>
-                  <td>Paced pathway</td>
-                </tr>
-                <tr>
-                  <td>NotebookLM</td>
-                  <td>Clarification and recap</td>
-                </tr>
-                <tr>
-                  <td>PDF library</td>
-                  <td>Official reference access</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p class="quiet-line">All routes lead to the same standard. Use the route that helps you act clearly.</p>
         </div>
-      </div>
-    </section>
 
-    <section class="section section-tight">
-      <div class="container">
-        <h2>Choose Your Route</h2>
-        <div class="route-grid">
+        <div class="routes-grid">
           <article class="route-card" id="tutor-route">
-            <span class="route-tag">Tutor</span>
+            <p class="card-label">TUTOR ROUTE</p>
             <h3>I am a Tutor</h3>
             <p>
-              Start with the Tutor Handbook. Then follow SKOOL in sequence. Use NotebookLM for quick clarification.
-              Open the formal documents when you need the exact standard.
+              Start with the Tutor Handbook. Then follow SKOOL in sequence. Use NotebookLM when you need a quick explanation or recap. Use the formal documents when you need the exact standard.
             </p>
-            <ol>
-              <li>Read the Tutor Handbook first</li>
-              <li>Then work through SKOOL in order</li>
-              <li>Use NotebookLM when you need clarification or recap</li>
-              <li>Use the formal documents when you need the exact standard</li>
-            </ol>
-            <div class="button-stack" id="tutorButtons"></div>
+            <div class="button-group" id="tutorButtons"></div>
           </article>
 
           <article class="route-card" id="mentor-route">
-            <span class="route-tag">Mentor</span>
+            <p class="card-label">MENTOR ROUTE</p>
             <h3>I am a Mentor</h3>
             <p>
-              Start with the Mentor Handbook. Then use the formal documents when observing, judging evidence,
-              or making progression and certification decisions.
+              Start with the Mentor Handbook. Then use the formal documents when observing, judging evidence, or making progression and certification decisions. Use SKOOL where stage pages matter. Use NotebookLM for quick clarification.
             </p>
-            <ol>
-              <li>Read the Mentor Handbook first</li>
-              <li>Use the formal documents when judging standards</li>
-              <li>Use SKOOL where mentor-linked stage pages matter</li>
-              <li>Use NotebookLM when you need quick clarification</li>
-            </ol>
-            <div class="button-stack" id="mentorButtons"></div>
+            <div class="button-group" id="mentorButtons"></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section alt">
       <div class="container">
-        <h2>Quick Access</h2>
-        <p class="section-copy">Use these links when you already know where you need to go.</p>
-        <div class="quick-grid" id="quickAccess"></div>
+        <div class="section-intro">
+          <h2 class="section-title">Quick Access</h2>
+          <p class="section-text">
+            Use these links when you already know where you need to go.
+          </p>
+        </div>
+        <div class="quick-access" id="quickAccess"></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container two-col-layout">
-        <div class="card">
-          <h2>When to Use What</h2>
-          <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr>
-                  <th>If you need...</th>
-                  <th>Go to...</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>The practical guide</td>
-                  <td>Handbook</td>
-                </tr>
-                <tr>
-                  <td>The next page, task, or training step</td>
-                  <td>SKOOL</td>
-                </tr>
-                <tr>
-                  <td>A quick explanation or recap</td>
-                  <td>NotebookLM</td>
-                </tr>
-                <tr>
-                  <td>The exact official standard</td>
-                  <td>Source Documents</td>
-                </tr>
-                <tr>
-                  <td>Help choosing the right route</td>
-                  <td>This Hub</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="quiet-line">
-            Start with the handbook. Use SKOOL for sequence. Use NotebookLM for clarification. Use the source documents for exact standards.
+      <div class="container">
+        <div class="section-intro">
+          <h2 class="section-title">When to Use What</h2>
+          <p class="section-text">
+            Use the handbook for day-to-day guidance. Use the source documents when you need the exact standard.
           </p>
         </div>
 
-        <div class="card">
-          <h2>Need Help?</h2>
-          <p>
-            Do not struggle in silence. For normal teaching, stage, or mentoring questions, start with your usual mentor
-            or academy route.
-          </p>
-          <p>
-            If the issue involves fairness, safeguarding, welfare, serious professional concern, or something that should not wait,
-            use the approved Jothi escalation route immediately.
-          </p>
-          <div class="button-stack" id="supportButtons"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>If you need...</th>
+                <th>Go to...</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The practical guide</td>
+                <td>Handbook</td>
+              </tr>
+              <tr>
+                <td>The next page, task, or training step</td>
+                <td>SKOOL</td>
+              </tr>
+              <tr>
+                <td>A quick explanation or recap</td>
+                <td>NotebookLM</td>
+              </tr>
+              <tr>
+                <td>The exact official standard</td>
+                <td>Source Documents</td>
+              </tr>
+              <tr>
+                <td>Help choosing the right route</td>
+                <td>This Hub</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <p class="section-note">
+          Start with the handbook. Use SKOOL for sequence. Use NotebookLM for clarification. Use the source documents for exact standards.
+        </p>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section alt">
       <div class="container">
-        <div class="section-header-row">
-          <div>
-            <h2>Source Documents</h2>
-            <p class="section-copy">Official PDFs. Keep the filenames unchanged in the <code>/pdfs</code> folder and just replace the file contents when you update versions.</p>
+        <div class="section-intro">
+          <h2 class="section-title">Handbooks</h2>
+          <p class="section-text">
+            These are the practical routes through the system. They do not replace the formal standards.
+          </p>
+        </div>
+        <div class="doc-grid" id="handbookDocs"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="documents-head">
+          <div class="section-intro no-margin">
+            <h2 class="section-title">Source Documents</h2>
+            <p class="section-text">
+              Open the formal JTA documents when you need the exact standard or reference point.
+            </p>
           </div>
-          <button class="btn btn-secondary" id="toggleDocsBtn" type="button" aria-expanded="false" aria-controls="documentsPanel">
+          <button
+            id="toggleDocsBtn"
+            class="btn btn-secondary"
+            type="button"
+            aria-expanded="false"
+            aria-controls="documentsPanel"
+          >
             Show Documents
           </button>
         </div>
 
-        <div id="documentsPanel" class="docs-panel hidden">
-          <div class="docs-group">
-            <h3>Handbooks</h3>
-            <div class="docs-grid" id="handbookDocs"></div>
+        <div id="documentsPanel" class="panel hidden">
+          <div class="panel-section">
+            <h3>Formal document library</h3>
+            <p class="panel-text">
+              These documents remain the official source of truth across the academy.
+            </p>
+            <div class="doc-grid" id="formalDocs"></div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="docs-group">
-            <h3>Formal JTA Documents</h3>
-            <div class="docs-grid" id="formalDocs"></div>
+    <section class="section alt">
+      <div class="container">
+        <div class="support-card">
+          <div class="section-intro no-margin">
+            <h2 class="section-title">Need Help?</h2>
+            <p class="section-text">
+              Do not struggle in silence. For normal teaching, stage, or mentoring questions, start with your usual mentor or academy route.
+            </p>
+            <p class="section-text">
+              If the issue involves fairness, safeguarding, welfare, serious professional concern, or something that should not wait, raise it through the approved Jothi escalation route immediately.
+            </p>
           </div>
+          <div class="button-group" id="supportButtons"></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Jothi Tutor Academy — one system, multiple routes, one standard.</p>
+  <footer class="footer">
+    <div class="container">
+      <p>Jothi Tutor Academy — one system, multiple routes, one standard</p>
     </div>
   </footer>
 
