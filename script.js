@@ -1,11 +1,44 @@
 const LINKS = {
   tutorHandbook: 'pdfs/Tutor_Handbook.pdf',
   mentorHandbook: 'pdfs/Mentor_Handbook.pdf',
+  tutorReflectionForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf4hSHqVhnDqZNAk2rPJHCPchYpIloPMuTDeQdUhu02lwULCA/viewform?usp=sharing&ouid=101133882699783936705',
+  mentorObservationForm: 'https://docs.google.com/forms/d/e/1FAIpQLSfGeo7HxNdEvjEAjq2_OM6-lUJHpG79our0voNGfJpxqKHccg/viewform?usp=sharing&ouid=101133882699783936705',
+  panelDashboard: 'https://docs.google.com/spreadsheets/d/1_zJiDDa3dCQSQDbuWzbGrStGD0DINAFp2TFXlFhomXI/edit?usp=sharing',
   skool: 'https://www.skool.com/full-ride-academy-6158/classroom',
   notebooklm: 'https://notebooklm.google.com/notebook/8c8f03b2-3019-46bd-a088-32e549f31f23?authuser=3',
   support: 'https://wa.me/447985588975?text=Hello%20JTA%20team%2C%20I%20need%20support%20with%20the%20academy%20hub.',
   escalation: 'https://mail.google.com/mail/?view=cm&fs=1&to=prakash@jothi.uk&su=JTA%20Escalation',
 };
+
+const PRIORITY_TOOLS = [
+  {
+    label: 'TUTOR TOOL',
+    title: 'Tutor Reflection Form',
+    description:
+      'Use after a lesson or lesson observation to capture reflection, evidence, and the next teaching move.',
+    cta: 'Open Tutor Reflection',
+    url: LINKS.tutorReflectionForm,
+    variant: 'primary',
+  },
+  {
+    label: 'MENTOR TOOL',
+    title: 'Mentor Observation Form',
+    description:
+      'Use during or after observation to record evidence, coaching targets, and sign-off contributions.',
+    cta: 'Open Mentor Observation',
+    url: LINKS.mentorObservationForm,
+    variant: 'secondary',
+  },
+  {
+    label: 'PANEL VIEW',
+    title: 'Panel Dashboard',
+    description:
+      'Use when reviewing tutor progression, competency coverage, mentor activity, and panel readiness.',
+    cta: 'Open Panel Dashboard',
+    url: LINKS.panelDashboard,
+    variant: 'tertiary',
+  },
+];
 
 const HANDBOOK_DOCS = [
   { title: 'Tutor Handbook', url: LINKS.tutorHandbook, meta: 'Practical route for tutors' },
@@ -29,7 +62,10 @@ const FORMAL_DOCS = [
 ];
 
 const QUICK_ACCESS = [
-  { label: 'Tutor Handbook', url: LINKS.tutorHandbook, variant: 'primary' },
+  { label: 'Tutor Reflection Form', url: LINKS.tutorReflectionForm, variant: 'primary' },
+  { label: 'Mentor Observation Form', url: LINKS.mentorObservationForm, variant: 'secondary' },
+  { label: 'Panel Dashboard', url: LINKS.panelDashboard, variant: 'tertiary' },
+  { label: 'Tutor Handbook', url: LINKS.tutorHandbook, variant: 'secondary' },
   { label: 'Mentor Handbook', url: LINKS.mentorHandbook, variant: 'secondary' },
   { label: 'SKOOL', url: LINKS.skool, variant: 'tertiary' },
   { label: 'NotebookLM', url: LINKS.notebooklm, variant: 'tertiary' },
@@ -46,7 +82,7 @@ function createButton(label, url, variant = 'secondary', options = {}) {
     el.type = 'button';
   } else {
     el.href = url;
-    if (url.startsWith('http') || url.startsWith('mailto:')) {
+    if (!url.startsWith('#')) {
       el.target = '_blank';
       el.rel = 'noopener noreferrer';
     }
@@ -79,6 +115,29 @@ function createDocLink({ title, url, meta = 'Open PDF' }) {
   return link;
 }
 
+function createPriorityCard({ label, title, description, cta, url, variant }) {
+  const card = document.createElement('article');
+  card.className = 'priority-card';
+
+  const cardLabel = document.createElement('p');
+  cardLabel.className = 'card-label';
+  cardLabel.textContent = label;
+
+  const heading = document.createElement('h3');
+  heading.textContent = title;
+
+  const text = document.createElement('p');
+  text.className = 'priority-text';
+  text.textContent = description;
+
+  const buttonWrap = document.createElement('div');
+  buttonWrap.className = 'priority-actions';
+  buttonWrap.appendChild(createButton(cta, url, variant));
+
+  card.append(cardLabel, heading, text, buttonWrap);
+  return card;
+}
+
 function scrollToId(id) {
   const el = document.getElementById(id);
   if (el) {
@@ -86,11 +145,17 @@ function scrollToId(id) {
   }
 }
 
+function mountPriorityTools() {
+  const priorityTools = document.getElementById('priorityTools');
+  PRIORITY_TOOLS.forEach((tool) => priorityTools.appendChild(createPriorityCard(tool)));
+}
+
 function mountButtons() {
   const tutorButtons = document.getElementById('tutorButtons');
   tutorButtons.append(
     createButton('Open Tutor Handbook', LINKS.tutorHandbook, 'primary'),
-    createButton('Go to SKOOL', LINKS.skool, 'secondary'),
+    createButton('Open Tutor Reflection Form', LINKS.tutorReflectionForm, 'secondary'),
+    createButton('Go to SKOOL', LINKS.skool, 'tertiary'),
     createButton('Ask NotebookLM', LINKS.notebooklm, 'tertiary'),
     createButton('Open Source Documents', '#documentsPanel', 'secondary', {
       onClick: (event) => {
@@ -103,6 +168,8 @@ function mountButtons() {
   const mentorButtons = document.getElementById('mentorButtons');
   mentorButtons.append(
     createButton('Open Mentor Handbook', LINKS.mentorHandbook, 'primary'),
+    createButton('Open Mentor Observation Form', LINKS.mentorObservationForm, 'secondary'),
+    createButton('Open Panel Dashboard', LINKS.panelDashboard, 'tertiary'),
     createButton('Open Source Documents', '#documentsPanel', 'secondary', {
       onClick: (event) => {
         event.preventDefault();
@@ -176,6 +243,7 @@ function mountEvents() {
   document.getElementById('toggleDocsBtn').addEventListener('click', toggleDocsPanel);
 }
 
+mountPriorityTools();
 mountButtons();
 mountDocs();
 mountEvents();
