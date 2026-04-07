@@ -9,7 +9,6 @@ const LINKS = {
   support: 'https://wa.me/447985588975?text=Hello%20JTA%20team%2C%20I%20need%20support%20with%20the%20academy%20hub.',
   escalation: 'https://mail.google.com/mail/?view=cm&fs=1&to=prakash@jothi.uk&su=JTA%20Escalation',
 };
-};
 
 const PRIORITY_TOOLS = [
   { label: 'Open Tutor Reflection', url: LINKS.tutorReflectionForm, variant: 'primary' },
