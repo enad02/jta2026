@@ -6,8 +6,9 @@ const LINKS = {
   panelDashboard: 'https://docs.google.com/spreadsheets/d/1_zJiDDa3dCQSQDbuWzbGrStGD0DINAFp2TFXlFhomXI/edit?usp=sharing',
   skool: 'https://www.skool.com/full-ride-academy-6158/classroom',
   notebooklm: 'https://notebooklm.google.com/notebook/8c8f03b2-3019-46bd-a088-32e549f31f23?authuser=3',
-  support: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Support',
-  escalation: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Escalation',
+  support: 'https://wa.me/447985588975?text=Hello%20JTA%20team%2C%20I%20need%20support%20with%20the%20academy%20hub.',
+  escalation: 'https://mail.google.com/mail/?view=cm&fs=1&to=prakash@jothi.uk&su=JTA%20Escalation',
+};
 };
 
 const PRIORITY_TOOLS = [
