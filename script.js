@@ -1,11 +1,11 @@
 const LINKS = {
   tutorHandbook: 'pdfs/Tutor_Handbook.pdf',
   mentorHandbook: 'pdfs/Mentor_Handbook.pdf',
-  tutorReflectionForm: 'https://YOUR-TUTOR-REFLECTION-FORM-URL',
-  mentorObservationForm: 'https://YOUR-MENTOR-OBSERVATION-FORM-URL',
-  panelDashboard: 'https://YOUR-PANEL-DASHBOARD-URL',
-  skool: 'https://YOUR-SKOOL-URL',
-  notebooklm: 'https://YOUR-NOTEBOOKLM-URL',
+  tutorReflectionForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf4hSHqVhnDqZNAk2rPJHCPchYpIloPMuTDeQdUhu02lwULCA/viewform?usp=sharing&ouid=101133882699783936705',
+  mentorObservationForm: 'https://docs.google.com/forms/d/e/1FAIpQLSfGeo7HxNdEvjEAjq2_OM6-lUJHpG79our0voNGfJpxqKHccg/viewform?usp=sharing&ouid=101133882699783936705',
+  panelDashboard: 'https://docs.google.com/spreadsheets/d/1_zJiDDa3dCQSQDbuWzbGrStGD0DINAFp2TFXlFhomXI/edit?usp=sharing',
+  skool: 'https://www.skool.com/full-ride-academy-6158/classroom',
+  notebooklm: 'https://notebooklm.google.com/notebook/8c8f03b2-3019-46bd-a088-32e549f31f23?authuser=3',
   support: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Support',
   escalation: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Escalation',
 };
