@@ -1,43 +1,19 @@
 const LINKS = {
   tutorHandbook: 'pdfs/Tutor_Handbook.pdf',
   mentorHandbook: 'pdfs/Mentor_Handbook.pdf',
-  tutorReflectionForm: 'https://docs.google.com/forms/d/e/1FAIpQLSf4hSHqVhnDqZNAk2rPJHCPchYpIloPMuTDeQdUhu02lwULCA/viewform?usp=sharing&ouid=101133882699783936705',
-  mentorObservationForm: 'https://docs.google.com/forms/d/e/1FAIpQLSfGeo7HxNdEvjEAjq2_OM6-lUJHpG79our0voNGfJpxqKHccg/viewform?usp=sharing&ouid=101133882699783936705',
-  panelDashboard: 'https://docs.google.com/spreadsheets/d/1_zJiDDa3dCQSQDbuWzbGrStGD0DINAFp2TFXlFhomXI/edit?usp=sharing',
-  skool: 'https://www.skool.com/full-ride-academy-6158/classroom',
-  notebooklm: 'https://notebooklm.google.com/notebook/8c8f03b2-3019-46bd-a088-32e549f31f23?authuser=3',
-  support: 'https://wa.me/447985588975?text=Hello%20JTA%20team%2C%20I%20need%20support%20with%20the%20academy%20hub.',
-  escalation: 'https://mail.google.com/mail/?view=cm&fs=1&to=prakash@jothi.uk&su=JTA%20Escalation',
+  tutorReflectionForm: 'https://YOUR-TUTOR-REFLECTION-FORM-URL',
+  mentorObservationForm: 'https://YOUR-MENTOR-OBSERVATION-FORM-URL',
+  panelDashboard: 'https://YOUR-PANEL-DASHBOARD-URL',
+  skool: 'https://YOUR-SKOOL-URL',
+  notebooklm: 'https://YOUR-NOTEBOOKLM-URL',
+  support: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Support',
+  escalation: 'mailto:YOUR-EMAIL@EXAMPLE.COM?subject=JTA%20Escalation',
 };
 
 const PRIORITY_TOOLS = [
-  {
-    label: 'TUTOR TOOL',
-    title: 'Tutor Reflection Form',
-    description:
-      'Use after a lesson or lesson observation to capture reflection, evidence, and the next teaching move.',
-    cta: 'Open Tutor Reflection',
-    url: LINKS.tutorReflectionForm,
-    variant: 'primary',
-  },
-  {
-    label: 'MENTOR TOOL',
-    title: 'Mentor Observation Form',
-    description:
-      'Use during or after observation to record evidence, coaching targets, and sign-off contributions.',
-    cta: 'Open Mentor Observation',
-    url: LINKS.mentorObservationForm,
-    variant: 'secondary',
-  },
-  {
-    label: 'PANEL VIEW',
-    title: 'Panel Dashboard',
-    description:
-      'Use when reviewing tutor progression, competency coverage, mentor activity, and panel readiness.',
-    cta: 'Open Panel Dashboard',
-    url: LINKS.panelDashboard,
-    variant: 'tertiary',
-  },
+  { label: 'Open Tutor Reflection', url: LINKS.tutorReflectionForm, variant: 'primary' },
+  { label: 'Open Mentor Observation', url: LINKS.mentorObservationForm, variant: 'secondary' },
+  { label: 'Open Panel Dashboard', url: LINKS.panelDashboard, variant: 'secondary' },
 ];
 
 const HANDBOOK_DOCS = [
@@ -62,10 +38,10 @@ const FORMAL_DOCS = [
 ];
 
 const QUICK_ACCESS = [
-  { label: 'Tutor Reflection Form', url: LINKS.tutorReflectionForm, variant: 'primary' },
-  { label: 'Mentor Observation Form', url: LINKS.mentorObservationForm, variant: 'secondary' },
-  { label: 'Panel Dashboard', url: LINKS.panelDashboard, variant: 'tertiary' },
-  { label: 'Tutor Handbook', url: LINKS.tutorHandbook, variant: 'secondary' },
+  { label: 'Tutor Reflection', url: LINKS.tutorReflectionForm, variant: 'secondary' },
+  { label: 'Mentor Observation', url: LINKS.mentorObservationForm, variant: 'secondary' },
+  { label: 'Panel Dashboard', url: LINKS.panelDashboard, variant: 'secondary' },
+  { label: 'Tutor Handbook', url: LINKS.tutorHandbook, variant: 'primary' },
   { label: 'Mentor Handbook', url: LINKS.mentorHandbook, variant: 'secondary' },
   { label: 'SKOOL', url: LINKS.skool, variant: 'tertiary' },
   { label: 'NotebookLM', url: LINKS.notebooklm, variant: 'tertiary' },
@@ -82,7 +58,7 @@ function createButton(label, url, variant = 'secondary', options = {}) {
     el.type = 'button';
   } else {
     el.href = url;
-    if (!url.startsWith('#')) {
+    if (url.startsWith('http') || url.startsWith('mailto:')) {
       el.target = '_blank';
       el.rel = 'noopener noreferrer';
     }
@@ -115,29 +91,6 @@ function createDocLink({ title, url, meta = 'Open PDF' }) {
   return link;
 }
 
-function createPriorityCard({ label, title, description, cta, url, variant }) {
-  const card = document.createElement('article');
-  card.className = 'priority-card';
-
-  const cardLabel = document.createElement('p');
-  cardLabel.className = 'card-label';
-  cardLabel.textContent = label;
-
-  const heading = document.createElement('h3');
-  heading.textContent = title;
-
-  const text = document.createElement('p');
-  text.className = 'priority-text';
-  text.textContent = description;
-
-  const buttonWrap = document.createElement('div');
-  buttonWrap.className = 'priority-actions';
-  buttonWrap.appendChild(createButton(cta, url, variant));
-
-  card.append(cardLabel, heading, text, buttonWrap);
-  return card;
-}
-
 function scrollToId(id) {
   const el = document.getElementById(id);
   if (el) {
@@ -145,88 +98,107 @@ function scrollToId(id) {
   }
 }
 
-function mountPriorityTools() {
-  const priorityTools = document.getElementById('priorityTools');
-  PRIORITY_TOOLS.forEach((tool) => priorityTools.appendChild(createPriorityCard(tool)));
-}
-
-function mountButtons() {
-  const tutorButtons = document.getElementById('tutorButtons');
-  tutorButtons.append(
-    createButton('Open Tutor Handbook', LINKS.tutorHandbook, 'primary'),
-    createButton('Open Tutor Reflection Form', LINKS.tutorReflectionForm, 'secondary'),
-    createButton('Go to SKOOL', LINKS.skool, 'tertiary'),
-    createButton('Ask NotebookLM', LINKS.notebooklm, 'tertiary'),
-    createButton('Open Source Documents', '#documentsPanel', 'secondary', {
-      onClick: (event) => {
-        event.preventDefault();
-        openDocsPanel();
-      },
-    })
-  );
-
-  const mentorButtons = document.getElementById('mentorButtons');
-  mentorButtons.append(
-    createButton('Open Mentor Handbook', LINKS.mentorHandbook, 'primary'),
-    createButton('Open Mentor Observation Form', LINKS.mentorObservationForm, 'secondary'),
-    createButton('Open Panel Dashboard', LINKS.panelDashboard, 'tertiary'),
-    createButton('Open Source Documents', '#documentsPanel', 'secondary', {
-      onClick: (event) => {
-        event.preventDefault();
-        openDocsPanel();
-      },
-    }),
-    createButton('Go to SKOOL', LINKS.skool, 'tertiary'),
-    createButton('Ask NotebookLM', LINKS.notebooklm, 'tertiary')
-  );
-
-  const supportButtons = document.getElementById('supportButtons');
-  supportButtons.append(
-    createButton('Get Support', LINKS.support, 'primary'),
-    createButton('Escalation Route', LINKS.escalation, 'secondary')
-  );
-
-  const quickAccess = document.getElementById('quickAccess');
-  QUICK_ACCESS.forEach((item) => {
-    const button = createButton(
-      item.label,
-      item.url,
-      item.variant,
-      item.scrollTarget
-        ? {
-            onClick: (event) => {
-              event.preventDefault();
-              openDocsPanel();
-            },
-          }
-        : {}
-    );
-    quickAccess.appendChild(button);
-  });
-}
-
-function mountDocs() {
-  const handbookDocs = document.getElementById('handbookDocs');
-  HANDBOOK_DOCS.forEach((doc) => handbookDocs.appendChild(createDocLink(doc)));
-
-  const formalDocs = document.getElementById('formalDocs');
-  FORMAL_DOCS.forEach((doc) =>
-    formalDocs.appendChild(createDocLink({ ...doc, meta: 'Official PDF document' }))
-  );
-}
-
 function openDocsPanel() {
   const panel = document.getElementById('documentsPanel');
   const toggle = document.getElementById('toggleDocsBtn');
+  if (!panel || !toggle) return;
   panel.classList.remove('hidden');
   toggle.setAttribute('aria-expanded', 'true');
   toggle.textContent = 'Hide Documents';
   scrollToId('documentsPanel');
 }
 
+function mountPriorityTools() {
+  const priorityTools = document.getElementById('priorityTools');
+  if (!priorityTools) return;
+
+  PRIORITY_TOOLS.forEach((tool) => {
+    priorityTools.appendChild(createButton(tool.label, tool.url, tool.variant));
+  });
+}
+
+function mountButtons() {
+  const tutorButtons = document.getElementById('tutorButtons');
+  if (tutorButtons) {
+    tutorButtons.append(
+      createButton('Open Tutor Handbook', LINKS.tutorHandbook, 'primary'),
+      createButton('Open Tutor Reflection', LINKS.tutorReflectionForm, 'secondary'),
+      createButton('Go to SKOOL', LINKS.skool, 'secondary'),
+      createButton('Ask NotebookLM', LINKS.notebooklm, 'tertiary'),
+      createButton('Open Source Documents', '#documentsPanel', 'secondary', {
+        onClick: (event) => {
+          event.preventDefault();
+          openDocsPanel();
+        },
+      })
+    );
+  }
+
+  const mentorButtons = document.getElementById('mentorButtons');
+  if (mentorButtons) {
+    mentorButtons.append(
+      createButton('Open Mentor Handbook', LINKS.mentorHandbook, 'primary'),
+      createButton('Open Mentor Observation', LINKS.mentorObservationForm, 'secondary'),
+      createButton('Open Panel Dashboard', LINKS.panelDashboard, 'secondary'),
+      createButton('Open Source Documents', '#documentsPanel', 'secondary', {
+        onClick: (event) => {
+          event.preventDefault();
+          openDocsPanel();
+        },
+      }),
+      createButton('Go to SKOOL', LINKS.skool, 'tertiary'),
+      createButton('Ask NotebookLM', LINKS.notebooklm, 'tertiary')
+    );
+  }
+
+  const supportButtons = document.getElementById('supportButtons');
+  if (supportButtons) {
+    supportButtons.append(
+      createButton('Get Support', LINKS.support, 'primary'),
+      createButton('Escalation Route', LINKS.escalation, 'secondary')
+    );
+  }
+
+  const quickAccess = document.getElementById('quickAccess');
+  if (quickAccess) {
+    QUICK_ACCESS.forEach((item) => {
+      const button = createButton(
+        item.label,
+        item.url,
+        item.variant,
+        item.scrollTarget
+          ? {
+              onClick: (event) => {
+                event.preventDefault();
+                openDocsPanel();
+              },
+            }
+          : {}
+      );
+      quickAccess.appendChild(button);
+    });
+  }
+}
+
+function mountDocs() {
+  const handbookDocs = document.getElementById('handbookDocs');
+  if (handbookDocs) {
+    HANDBOOK_DOCS.forEach((doc) => handbookDocs.appendChild(createDocLink(doc)));
+  }
+
+  const formalDocs = document.getElementById('formalDocs');
+  if (formalDocs) {
+    FORMAL_DOCS.forEach((doc) =>
+      formalDocs.appendChild(createDocLink({ ...doc, meta: 'Official PDF document' }))
+    );
+  }
+}
+
 function toggleDocsPanel() {
   const panel = document.getElementById('documentsPanel');
   const toggle = document.getElementById('toggleDocsBtn');
+  if (!panel || !toggle) return;
+
   const isHidden = panel.classList.contains('hidden');
 
   if (isHidden) {
@@ -240,7 +212,10 @@ function toggleDocsPanel() {
 }
 
 function mountEvents() {
-  document.getElementById('toggleDocsBtn').addEventListener('click', toggleDocsPanel);
+  const toggleDocsBtn = document.getElementById('toggleDocsBtn');
+  if (toggleDocsBtn) {
+    toggleDocsBtn.addEventListener('click', toggleDocsPanel);
+  }
 }
 
 mountPriorityTools();
